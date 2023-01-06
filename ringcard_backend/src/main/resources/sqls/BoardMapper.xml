@@ -1,0 +1,11 @@
+<!-- MySQL-->
+<!-- 게시물 목록(페이징) -->
+<select id="getListPaging" resultType="com.vam.model.BoardVO">
+
+    select * from (
+    select *
+    from ringcard.question order by id desc) as T1
+    <!-- limit ((${pageNum}-1)*${amount}), ${amount} -->
+    limit #{skip},#{amount}
+
+</select>

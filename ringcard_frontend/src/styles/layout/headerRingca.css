@@ -1,0 +1,61 @@
+.header-ringca{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.header-ringca-logo{
+  /* width: 139px; */
+  /* height: 50px; */
+  /* margin: 0 125px 110px 63px; */
+  opacity: 0.87;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  font-family: LeagueSpartan;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.28px;
+  text-align: left;
+  color: #fff;
+}
+
+
+
+.header-ringca-logo-box {
+  height:100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.profile-pic-large img {
+  margin-top: 8%;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 38.5px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 2px #f7cec6;
+}
+
+.profile-pic-larg-name {
+  font-family: AppleSDGothicNeo;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  margin-top: 3%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.profile-pic-blank{
+  height: 20%;
+}

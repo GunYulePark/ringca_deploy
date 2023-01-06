@@ -1,0 +1,57 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: inherit;
+  /* height: 13%; */
+  height: 73px;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+  background: linear-gradient(#6979ae, #7680b2);
+
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.header-blank {
+  margin-top: 0;
+
+}
+
+.top-banner {
+
+  height: 73px;
+  margin-top: auto;
+  padding: 0 27px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-btn {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.profile-pic {
+  display: flex;
+  margin-top: auto;
+  /* margin-bottom: 21px; */
+  margin-bottom: 17px;
+}
+
+.profile-pic img {
+  border: 2px solid rgb(210, 210, 210);
+  border-radius: 100%;
+
+}
+
+.menu-btn {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}

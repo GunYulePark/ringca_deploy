@@ -1,0 +1,23 @@
+type: object
+properties:
+  questionList:
+    type: array
+    items:
+      type: object
+      properties:
+        qId:
+          type: integer
+          example: 13
+        qContents:
+          type: string
+          example: '건률씨 빠이팅~!~!'
+        userId:
+          type: string
+          example: '0ae7b89kel87'
+        qAnswered:
+          type: boolean
+          example: true
+        qInTrash:
+          type: boolean
+          example: false
+

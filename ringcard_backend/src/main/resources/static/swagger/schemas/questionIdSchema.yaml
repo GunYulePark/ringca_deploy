@@ -1,0 +1,5 @@
+type: object
+properties:
+  qId:
+    type: string
+    example: '0ae7b89kasdel87'

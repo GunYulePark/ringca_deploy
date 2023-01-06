@@ -1,0 +1,20 @@
+post:
+  tags:
+    - auth
+  summary: 처음으로 비밀번호 설정하기
+  description: 이메일 토큰을 타고 온 사용자가 비밀번호를 설정할 때 사용하는 API
+  requestBody:
+    $ref: "../schemas/authSetPwdSchema.yaml"
+  responses:
+    "201":
+      description: 아이디, 이메일, 비밀번호를 DB에 성공적으로 저장했을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/successMessage.yaml"
+    "400":
+      description: 비밀번호가 일치하지 않거나 input type이 잘못 되었을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/400Schema.yaml"

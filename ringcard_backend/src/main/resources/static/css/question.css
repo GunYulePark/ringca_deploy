@@ -1,0 +1,26 @@
+.input-text-area {
+    height: 160px;
+    resize: none;
+}
+
+.card-header {
+    text-align: left;
+}
+
+.card-body {
+    text-align: left;
+
+}
+
+.card-footer {
+    padding: 0;
+}
+
+.card-footer-buttons {
+    width: 100%;
+}
+
+.hyperlink-text {
+    font-size: small;
+    margin-top: 5px;
+}

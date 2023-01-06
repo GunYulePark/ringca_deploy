@@ -1,0 +1,16 @@
+.BtnToTwitterLogin-btn {
+  margin: 10px auto 0 auto;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+
+  display: flex;
+}
+
+.BtnToTwitterLogin-btn-img {
+  width: 210px;
+  margin: auto auto;
+}
+
+.BtnToTwitterLogin-btn-img:active {
+  filter:brightness(70%);
+}

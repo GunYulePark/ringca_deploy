@@ -1,0 +1,248 @@
+.question-notes-container {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.question-note {
+  margin: 0 auto;
+
+  width: 80%;
+  min-width: 300px;
+  max-width: 410px;
+  min-height: 100px;
+  /* max-height: 220px; */
+  /* height: 22vh; */
+
+  background-size: 100% 100%;
+  padding: 15px;
+
+}
+
+.QuestionNote-maskingTape-box {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 1px;
+
+  /* position: relative; */
+  z-index: 10;
+  margin: 0 auto;
+
+  display: flex;
+
+}
+
+
+/* .QuestionNoteAnony-maskingTape-img {
+  width: 130px;
+  height: 28px;
+
+  margin: 0 auto;
+  margin-top 필수! 얘가 있어야 보임.
+
+  margin-top: -5px;
+
+}
+
+/* .QuestionNote-maskingTape-img {
+  width: 130px;
+  height: 28px;
+
+  margin: 0 auto;
+
+  margin-top 필수! 얘가 있어야 보임.
+
+  margin-top: -25px;
+
+} */
+
+.note-header {
+  /* background-color: aqua; */
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.note-profile-pic {
+  /* background-color: pink; */
+  margin-right: 10px;
+  z-index: 20;
+
+}
+
+.note-profile-pic img {
+  width: 40px;
+  border-radius: 100%;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.note-time {
+  line-height: 40px;
+  font-size: 9px;
+  color: #999999;
+}
+
+.note-content-box {
+  /* background-color: darkgray; */
+  height: 54px;
+  padding: 8px 20px;
+
+
+  /* display: flex; */
+  /* display: -webkit-flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-content {
+  /* background-color: aqua; */
+  /* overflow는 ...으로 대체하기 위함 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  text-align: center;
+  font-family: NanumBarunGothic;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #333;
+}
+
+.note-hr {
+  border: solid 0.1px rgba(48, 6, 96, 0.09);
+  width: 98.5%;
+  margin: 0 auto;
+}
+
+.note-footer {
+  /* background-color:honeydew; */
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 3px;
+}
+
+.note-footer-leftside-btns-container {
+  width: 68px;
+  /* padding-top: 10px; */
+  padding-left: 1px;
+  padding-bottom: 17px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.note-footer button {
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 0 black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.note-trashcan-btn {
+  width: 19px;
+  height: 21px;
+}
+
+.note-collection-btn {
+  width: 16px;
+  height: 22px;
+}
+
+
+.note-footer-rightside-btns-container {
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 26px;
+}
+
+.note-send-answer-btn {
+  width: 23px;
+  margin-top: -4px;
+}
+
+.note-edit-answer-btn {
+  width: 18px;
+  margin-right: 5px;
+}
+
+.note-delete-answer-btn {
+  margin-top: 2px;
+  width: 19px;
+  margin-right: 3px;
+}
+
+.note-answer-form-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.QuestionNote-note-hyperlink-box {
+  /* background-color: aquamarine; */
+  width: 100%;
+  text-decoration: none;
+  color: #666666;
+
+  justify-self: left;
+}
+
+
+.QuestionNoteAnony-note-footer {
+  /* background-color:honeydew; */
+  /* height: 50px; */
+
+  padding-top: 10px;
+
+}
+
+
+
+.QuestionNoteAnony-note-footer-btns-container {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.QuestionNoteAnony-note-footer-btns-container button {
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 0 black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.QuestionNoteAnony-note-content-answer {
+  display: flex;
+  justify-content: center;
+  min-height: 30px;
+  padding: 10px;
+}
+
+.QuestionNoteAnony-each-question-note-footer-edge-img-box {
+  height: 40px;
+  background-size: 100% 100%;
+  margin-top: -20px;
+}
+
+.note-link{
+  text-decoration-line : none;
+}
+
+.QuestionNoteAnony-line-limit {
+  display: -webkit-box!important;
+  -webkit-line-clamp: 5;
+  text-overflow: ellipsis; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

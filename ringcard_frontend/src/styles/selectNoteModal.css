@@ -1,0 +1,144 @@
+.SelectNoteModal-area {
+  /* 모달창 크기 */
+  width: 167px;
+  /* height: 110px; */
+
+  padding: 10px 6px;
+
+  /* 최상단 위치 */
+  z-index: 1100;
+  
+  /* 중앙 배치 */
+  /* top, bottom, left, right 는 브라우저 기준으로 작동한다. */
+  /* translate는 본인의 크기 기준으로 작동한다. */
+  position: absolute;
+  right: calc(8% - 5.5px);
+  margin-top: -10px;
+
+  /* 모달창 디자인 */
+  background-color: white;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.SelectNoteModal-header{
+  display: flex;
+  flex-direction: row;
+}
+
+.SelectNoteModal-header-text {
+
+  width: fit-content;
+  height: 14px;
+  margin-top: auto;
+  margin-left: 5px;
+
+  font-family: AppleSDGothicNeo;
+  font-size: 5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #666;
+}
+
+.SelectNoteModal-selected-box {
+  margin-left: auto;
+  /* background-color: aqua; */
+  width: 70px;
+  height: 30px;
+  padding: 0 5px;
+
+  border-radius: 3px;
+
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.SelectNoteModal-hr {
+  width: 98%;
+  height: 0.8px;
+  margin: 8px 0 6px 0;
+
+  opacity: 0.22;
+
+  background-color: #707070;
+
+}
+
+.SelectNotemodal-colors-box {
+  width: calc(179px - 12px - 6px);
+  margin: 0 auto;
+  padding: 0px 3px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.SelectNotemodal-color-option {
+  width: 30px;
+  height: 30px;
+  margin: 3px 4.6px;
+  border-radius: 100%;
+
+
+}
+
+.SelectNotemodal-color-option:active {
+  border: 0.5px solid #000;
+}
+
+.SelectNotemodal-color-option div{
+  /* background-color: #666; */
+  width: 50px;
+  margin: 0 auto;
+
+  justify-self: center;
+
+  color: red;
+  font-size: 12px;
+  transform: translate(-19.8%, 12.5%) scale(0.6);
+  font-family: AppleSDGothicNeo;
+
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 25px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #666;
+}
+
+.SendQuestionForm-note-color {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: auto 5px auto 0;
+  /* background-color: #e9e1ec; */
+}
+
+.SendQuestionForm-note-color-text {
+  /* background-color: aqua; */
+  font-family: AppleSDGothicNeo;
+  font-size: 7px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3.14;
+  letter-spacing: normal;
+  text-align: center;
+  color: #a987a0;
+}
+
+
+.SendQuestionForm-open-modal-btn {
+  width: 10px;
+}

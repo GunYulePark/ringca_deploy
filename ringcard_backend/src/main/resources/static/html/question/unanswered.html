@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/layout.css" rel="stylesheet">
+    <link href="../../css/question.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="home-icon">
+            <img  src="../../public/homeIcon.png" onclick="location.href='../home/unanswered.html'">
+        </div>
+    </header>
+    <div class="py-5 text-center">
+        <h2>미응답 질문 - 회원</h2>
+    </div>
+    <div>
+        <label for="questionContents">질문</label>
+        <input type="text" id="questionContents" name="questionContents" class="form-control"
+               value="하늘에 별은 몇 개나 있나요?" readonly>
+        <div class="form-control"><a href="https://www.youtube.com/watch?v=J8k1d59CKyk">https://www.youtube.com/watch?v=J8k1d59CKyk</a></div>
+    </div>
+    <div>
+        <label for="answerAdd">답변 폼</label>
+        <textarea id="answerAdd" name="answerAdd" class="form-control input-text-area" placeholder="답변을 입력하세요"></textarea>
+    </div>
+    <div class="col">
+        <button class="w-100 btn btn-primary btn-lg"
+                onclick="location.href='../unanswered.html'" type="button">답변 등록</button>
+    </div>
+    <hr class="my-4">
+    <div class="py-5 text-center">
+        <h2>미응답 질문 리스트</h2>
+        <div class="col">
+
+            <div class="card">
+                <div class="card-header">
+                    3분 전
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0" onclick="location.href='unanswered.html'">
+                        <p>오늘 저녁 맛있는 거 먹어!!</p>
+                    </blockquote>
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="col">
+                        <button class="w-30 btn"
+                                onclick="location.href='unanswered.html'" type="button">답변하기</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    3분 전
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0" onclick="location.href='unanswered.html'">
+                        <p>오늘 저녁 맛있는 거 먹어!!</p>
+                        <div style="font-size: small"><a href="https://www.youtube.com/watch?v=J8k1d59CKyk">https://www.youtube.com/watch?v=J8k1d59CKyk</a></div>
+                    </blockquote>
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="col">
+                        <button class="w-30 btn"
+                                onclick="location.href='unanswered.html'" type="button">답변하기</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

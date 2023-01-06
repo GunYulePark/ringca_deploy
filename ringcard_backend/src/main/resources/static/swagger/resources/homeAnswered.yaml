@@ -1,0 +1,63 @@
+get:
+  security:
+    - bearerAuth: []
+  tags:
+    - Home
+  summary: Returns Answered Question List of the user
+  parameters:
+    #    - in: header
+    #      $ref: "../schemas/TODO-auth"
+    - name: userId
+      in: query
+      required: true
+      description: 로그인된 유저의 ID
+      example: '0ae7b89kel87'
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: 정상적으로 불러와짐
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/questionListSchema.yaml"
+    "400":
+      description: 입력값이 문자가 아니거나, 파라미터 값이 주어지지 않았을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/400Schema.yaml"
+
+    # TODO: Answered 와 InTrash 값에 따라, 혹은 userId가 다를 때도 추가해야할지 나중에 보기
+
+post:
+  tags:
+    - Home
+  summary: 질문을 응답 질문 -> 휴지통으로 바꾸기
+  description: 사용자가 지정한 응답 상태의 질문을 휴지통에 넣는다. 해당 question의 qInTrash 값이 true 상태가 된다. 단 답변은 사라지지는 않음.
+  parameters:
+    - in: header
+      $ref: "../schemas/authTokenHeader.yaml"
+  requestBody:
+    $ref: "../schemas/questionIdSchema.yaml"
+  responses:
+    "201":
+      description: 미응답 질문을 성공적으로 휴지통에 들어가게 함. qInTrash값이 true로
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/successMessage.yaml"
+    "400":
+      description: 질문 아이디가 존재하지 않거나, Input type이 잘못 되었을 떄
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/400Schema.yaml"
+    "401":
+      description: userId가 없을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/401Schema.yaml"
+

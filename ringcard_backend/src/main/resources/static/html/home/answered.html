@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/layout.css" rel="stylesheet">
+    <link href="../../css/home.css" rel="stylesheet">
+
+    <title>응답완료 질문들</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="home-icon">
+            <img  src="../../public/homeIcon.png" onclick="location.href='../home/unanswered.html'">
+        </div>
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="nav-item"><a class="navbar-brand" href="unanswered.html">미응답</a></div>
+                <div class="nav-item active"><a class="navbar-brand" href="answered.html">답변됨</a></div>
+                <div class="nav-item"><a class="navbar-brand" href="trashcan.html">휴지통</a></div>
+                <div class="nav-item"><a class="navbar-brand" href="trashcan.html">보관함</a></div>
+            </div>
+        </nav>
+    </header>
+    <content>
+        <div class="card">
+            <div class="card-header">
+                3분 전
+            </div>
+            <a href="../question/answeredAnony.html">
+            <div class="card-body">
+                    <blockquote class="blockquote mb-0" onclick="location.href='../question/answeredUser.html'">
+                    <p>오늘 점심 뭐 먹었어?</p>
+                    </blockquote>
+            </div>
+            </a>
+            <div class="card-footer text-muted">
+                <div class="btn-group card-footer-buttons" role="group" aria-label="Basic example">
+                    <div class="btn btn-primary card-footer-btn-custom" onclick="#"
+                         name=""
+                         type="button">
+                        <form th:object="${question}" method="post">
+                            <input type="checkbox" th:field="*{inCollection}" id="inCollection">
+                            <label for="inCollection">보관하기</label>
+                        </form>
+                    </div>
+                    <button class="btn btn-primary card-footer-btn-custom"
+                            th:onclick="|location.href='@{/../question/{questionId}/edit/user(questionId=${question.id})}'|"
+                            name=""
+                            type="button">답변수정</button>
+                    <button class="btn btn-primary card-footer-btn-custom" onclick="location.href='trashcan.html'"
+                            th:onclick="|location.href='@{/home/trashcan}'|"
+                            type="button">답변삭제</button>
+                    <button class="btn btn-primary card-footer-btn-custom" onclick="location.href='trashcan.html'"
+                            th:onclick="|location.href='@{/home/trashcan}'|"
+                            type="button">삭제하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                1시간 전
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0" onclick="location.href='../question/unanswered.html'">
+                    <p>링카 사람들이 많이 썼으면 좋겠다 그치</p>
+                </blockquote>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="btn-group card-footer-buttons" role="group" aria-label="Basic example">
+                    <button class="btn btn-primary card-footer-btn-custom" onclick="#"
+                            th:onclick="#"
+                            name=""
+                            type="button">보관하기</button>
+                    <button class="btn btn-primary card-footer-btn-custom"
+                            th:onclick="|location.href='@{/../question/{questionId}/edit/user(questionId=${question.id})}'|"
+                            name=""
+                            type="button">답변수정</button>
+                    <button class="btn btn-primary card-footer-btn-custom" onclick="location.href='trashcan.html'"
+                            th:onclick="|location.href='@{/home/trashcan}'|"
+                            type="button">답변삭제</button>
+                    <button class="btn btn-primary card-footer-btn-custom" onclick="location.href='trashcan.html'"
+                            th:onclick="|location.href='@{/home/trashcan}'|"
+                            type="button">삭제하기</button>
+                </div>
+            </div>
+        </div>
+    </content>
+</div>
+</body>
+</html>

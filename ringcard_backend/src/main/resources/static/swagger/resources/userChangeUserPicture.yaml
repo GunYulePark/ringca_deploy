@@ -1,0 +1,24 @@
+post:
+  tags:
+    - user
+  summary: Change userInfo Picture
+  requestBody:
+    description: New userPicture path
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/userInfoChangePictureSchema.yaml"
+  responses:
+    "200":
+      description: 정상적으로 불러와짐
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/200Schema.yaml"
+    "400":
+      description: 입력값의 형식이 다를 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/400Schema.yaml"

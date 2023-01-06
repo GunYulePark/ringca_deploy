@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+          href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/layout.css}"
+          href="../../css/layout.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="container-fluid navbar-custom">
+            <div class="home-icon" onclick="location.href='../home/unanswered.html'"
+                 th:onclick="|location.href='@{/home/unanswered}'|">
+                <img src="../public/homeIcon.png" th:src="@{/public/homeIcon.png}">
+            </div>
+
+            <div type="button" class="menu" data-bs-toggle="modal" data-bs-target="#sideModal">
+                <img src="../../public/menu-icon.png" th:src="@{/public/menu-icon.png}">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="sideModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li><a th:href="@{/mypage/info}">
+                            <div>마이페이지</div>
+                        </a></li>
+                        <li><a>
+                            <div>
+                                <form th:action="@{/logout}" method="post">
+                                    <button class="logout-button" type="submit">
+                                        로그아웃
+                                    </button>
+                                </form>
+                            </div>
+                        </a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h2>탈퇴하시겠습니까? 링카드는 울어요ㅠㅠ</h2>
+<form action="" , th:action method="POST">
+    탈퇴를 원하시면 비밀번호를 입력해주세요.
+    <div class="col-12">
+        <label for="password" class="form-label">비밀번호</label>
+        <input type="text" class="form-control" id="password" name="password" placeholder="비밀번호를 입력해주세요">
+        <i th:if="${param.passwordFalse}" th:text="'잘못된 비밀번호입니다.'"></i>
+    </div>
+    <button class="w-30 btn-warning"
+            name=""
+            type="submit">제출
+    </button>
+</form>
+<button class="w-30 btn-primary"
+        onclick="#"
+        th:onclick="|location.href='@{/mypage/info}'|"
+        name=""
+        type="button">계속 사용할래요!.
+</button>
+</body>
+</html>

@@ -1,0 +1,41 @@
+get:
+  security:
+    - bearerAuth: []
+  tags:
+    - Question
+  summary: Returns each question's page with text space to answer
+  parameters:
+    #    - in: header
+    #      $ref: "../schemas/TODO-auth"
+    - name: userId
+      in: query
+      required: true
+      description: 로그인된 유저의 ID
+      example: '0ae7b89kel87'
+      schema:
+        type: string
+    - name: qId
+      in: query
+      required: true
+      description: 선택된 질문의 ID
+      example: '0ae7b89kel87909898'
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: 정상적으로 불러와짐
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/questionCompletedSchema.yaml"
+    "400":
+      description: 입력값이 문자가 아니거나, 파라미터 값이 주어지지 않았을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/400Schema.yaml"
+
+    # TODO: Answered 와 InTrash 값이 false 이지 않을 때나 userId가 다를 때도 추가해야할지 나중에 보기
+
+

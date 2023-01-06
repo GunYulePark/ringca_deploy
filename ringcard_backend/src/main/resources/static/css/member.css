@@ -1,0 +1,36 @@
+.img-div p {
+    margin-right: 400px;
+}
+
+.user-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 40px;
+}
+
+.update-img-box {
+    width: 250px;
+    height: 120px;
+    margin-top: 50px;
+    padding: 20px;
+    flex: left;
+
+    background-color: white;
+
+}
+
+.change-img {
+    margin-left: 25%;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.button-zone {
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+.button-zone button {
+    display: inline-block;
+}

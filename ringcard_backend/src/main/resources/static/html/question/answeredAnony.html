@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/layout.css" rel="stylesheet">
+    <style>
+ .container {
+ max-width: 560px;
+ }
+ </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="home-icon">
+            <img  src="../../public/homeIcon.png" onclick="location.href='../home/unanswered.html'">
+        </div>
+    </header>
+    <div class="py-5 text-center">
+        <h2>응답 질문 - 익명</h2>
+    </div>
+    <div>
+        <label for="questionContents">질문</label>
+        <input type="text" id="questionContents" name="questionContents" class="form-control"
+               value="하늘에 별은 몇 개나 있나요?" readonly>
+    </div>
+    <div>
+        <label for="answerContents">답변</label>
+        <input type="text" id="answerContents" name="answerContents" class="form-control"
+               value="7*10^22개 있습니다." readonly>
+    </div>
+    <div>
+        <label for="answerAdd">새로운 질문 폼</label>
+        <input type="text" id="answerAdd" name="answerAdd" class="form-control" placeholder="새로운 질문을 입력하세요">
+    </div>
+    <div class="col">
+        <button class="w-100 btn btn-primary btn-lg"
+                onclick="location.href='answeredAnony.html'" type="button">새로운 질문 등록</button>
+    </div>
+    <hr class="my-4">
+    <div class="py-5 text-center">
+    <h2>응답 질문 리스트</h2>
+    <div class="col">
+
+        <div class="card">
+            <div class="card-header">
+                3분 전
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0" onclick="location.href='answeredAnony.html'">
+                    <p>오늘 저녁 맛있는 거 먹어!!</p>
+                    <footer class="blockquote-footer">하이퍼링크 여기로? 따로 받아야되나 그러면</footer>
+                </blockquote>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="col">
+                    <button class="w-30 btn"
+                            onclick="location.href='answeredAnony.html'" type="button">답변 보기</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                3분 전
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0" onclick="location.href='answeredAnony.html'">
+                    <p>오늘 저녁 맛있는 거 먹어!!</p>
+                    <footer class="blockquote-footer">하이퍼링크 여기로? 따로 받아야되나 그러면</footer>
+                </blockquote>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="col">
+                    <button class="w-30 btn"
+                            onclick="location.href='answeredAnony.html'" type="button">답변 보기</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+</div> <!-- /container -->
+
+</body>
+</html>

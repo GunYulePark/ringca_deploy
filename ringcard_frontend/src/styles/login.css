@@ -1,0 +1,94 @@
+
+.login-join-box{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login-join{
+  width: 100%;
+  height: 15px;
+  margin: 20% 0 4.3px 0;
+  font-family: NanumBarunGothic;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.login-join-text{
+  color: #fff;
+  text-decoration-line: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 0.5px;
+  /* text-decoration: none; */
+  /* text-align: center;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+.Login-findPwd-text-box {
+  width: 100%;
+
+  text-align: right;
+  
+}
+
+
+.Login-twitter-login-btn {
+  width: 100%;
+  display: flex;
+}
+
+
+.FindPassword-info-text {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+}
+
+.Findpassword-send-btn-box {
+  display: flex;
+
+}
+
+.FindPassword-send-btn {
+  width: 60%; 
+  height: var(--user-box-height);
+  margin: 13px auto 13px auto;
+  padding: 12px 19px 14px 15px;
+  border-radius: 9px;
+  border: none;
+  box-shadow: 0 3px 10px 0 rgba(126, 116, 116, 0.16);
+  /* 조절 */
+  background-color: #516bb1;
+  margin-top: 11%;
+
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.FindPassword-user-text-error {
+  width: 98%;
+  /* opacity: 0.87; */
+  font-family: NanumBarunGothic;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgb(158, 52, 52);
+  margin-left: auto;
+  margin-right: auto;
+}

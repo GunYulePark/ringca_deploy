@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/layout.css" rel="stylesheet">
+    <link href="../../css/home.css" rel="stylesheet">
+
+    <title>휴지통</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="home-icon">
+            <img  src="../../public/homeIcon.png" onclick="location.href='../home/unanswered.html'">
+        </div>
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="nav-item"><a class="navbar-brand" href="unanswered.html">미응답</a></div>
+                <div class="nav-item"><a class="navbar-brand" href="answered.html">답변됨</a></div>
+                <div class="nav-item active"><a class="navbar-brand" href="trashcan.html">휴지통</a></div>
+                <div class="nav-item"><a class="navbar-brand" href="trashcan.html">보관함</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="empty-trash-container">
+        <button type="button" class="btn btn-danger empty-trash-can">휴지통 비우기</button>
+        <div class="fyi">휴지통에 있는 모든 질문들이 영구적으로 삭제됩니다.</div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-header">
+                3분 전
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>휴지통 질문 1</p>
+                    <footer class="blockquote-footer">하이퍼링크 여기로? 따로 받아야되나 그러면</footer>
+                </blockquote>
+            </div>
+            <div class="card-footer text-muted">
+                복구하기
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                1시간 전
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>휴지통 질문 2</p>
+                    <footer class="blockquote-footer">하이퍼링크 여기로? 따로 받아야되나 그러면</footer>
+                </blockquote>
+            </div>
+            <div class="card-footer text-muted">
+                복구하기
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* .UserHome-contents-container {
+  position: relative;
+  
+  top: 260px;
+  width: 100%;
+  max-width: inherit;
+  height: 100%;
+  z-index: 20;
+} */
+
+
+.UserHome-profile-box {
+  /* background-color: yellowgreen; */
+  width: 100%;
+  max-width: inherit;
+  height: 110px;
+  /* margin-top: 3%; */
+  margin-bottom: 10px;
+  
+  position: fixed;
+  top: 110px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.UserHome-profile-box img {
+  width: 70px;
+  border-radius: 100%;
+  border: solid 2px rgb(210, 210, 210);
+}
+
+.UserHome-profile-username {
+  margin-top: 15px;
+
+  font-family: AppleSDGothicNeo;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.UserHome-SendQuestionForm-container {
+  width: 100%;
+  max-width: inherit;
+  height: 70px;
+
+  position: fixed;
+  
+  top: 180px;
+
+  margin-top: 70px;
+
+
+  z-index: 20;
+}
+
+.UserHome-questionlist-box {
+  width: 100%;
+  max-width: inherit;
+  height: 70%;
+  /* padding-top: 40px; */
+  /* margin-top: 270px; */
+  margin-top: 100px;
+  /* padding-bottom: 250px; */
+
+
+  /* sticky -> fixed로 바꾼 게 스크롤 문제 해결열쇠 */
+  position: fixed;
+  /* 선택창 없을 때 */
+  top: 257px;
+  /* 선택창 있을 때  */
+  top: calc(257px + 30px);
+
+  /* bottom: 0px; */
+  z-index: 0;
+
+  border-radius: 30px 25px 0 0;
+  box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
+  overflow: scroll;
+}
+
+.UserHome-down-background-img {
+  background-image: url('../../public/background-img/down-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: -40px;
+  background-size: 105% 105%;
+  min-height: 600px;
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.block {
+  display: block;
+}
+
+.UserHome-viewMore-btn-container {
+  width: 100%;
+  height: 40px;
+  padding-bottom: 20%;
+  /* background-color: #fff; */
+}
+.UserHome-viewMore-btn-section {
+  /* background-color: aqua; */
+  width: 50%;
+  height: 40px;
+  background-color: #8188b3;
+  border-radius: 12px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16);
+  margin: 0 auto;
+}
+
+.UserHome-viewMore-btn{
+  width: 100%;
+  font-family: NanumBarunGothic;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2.7rem;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 9px;
+  border: none;
+}
+
+.UserHome-viewMore-btn-section:active {
+  background-color: #b1b4c7;
+}
+
+.UserHome-viewMore-btn-section:active .view-more-btn {
+  color: #666666;
+}

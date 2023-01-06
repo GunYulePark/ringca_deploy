@@ -1,0 +1,13 @@
+.header-noprofile {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: inherit;
+  /* height: 13%; */
+  height: 73px;
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1100;
+}
+

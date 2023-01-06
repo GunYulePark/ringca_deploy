@@ -1,0 +1,183 @@
+
+.SuggestionPage-profile-box {
+  /* background-color: yellowgreen; */
+  width: 100%;
+  max-width: inherit;
+  height: 200px;
+  /* margin-top: 3%; */
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SuggestionPage-profile-box img {
+  width: 70px;
+  border-radius: 100%;
+  border: solid 2px rgb(210, 210, 210);
+}
+
+.SuggestionPage-profile-username {
+  margin-top: 15px;
+
+  font-family: AppleSDGothicNeo;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.SuggestionPage-SendQuestionForm-container {
+  width: 100%;
+  max-width: inherit;
+  height: 70px;
+
+  position: fixed;
+  
+  top: 180px;
+
+  margin-top: 30px;
+
+
+  z-index: 20;
+}
+
+.SuggestionPage-questionlist-box {
+  width: 100%;
+  max-width: inherit;
+  height: 70%;
+  /* padding-top: 40px; */
+  /* margin-top: 270px; */
+  margin-top: 100px;
+  /* padding-bottom: 250px; */
+
+
+  /* sticky -> fixed로 바꾼 게 스크롤 문제 해결열쇠 */
+  position: fixed;
+  /* 선택창 없을 때 */
+  top: 257px;
+  /* 선택창 있을 때  */
+  top: calc(257px + 30px);
+
+  /* bottom: 0px; */
+  z-index: 0;
+
+  border-radius: 30px 25px 0 0;
+  box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
+  overflow: scroll;
+}
+
+
+
+.SuggestionPage-information {
+  /* background-color: aqua; */
+  width: 100%;
+  color: white;
+  height: 80px;
+
+  margin-top: 50px;
+
+  text-align: center;
+
+}
+
+.SendQuestionFormSuggestionpage-sender {
+  /* background-color: rgb(214, 98, 98); */
+
+  padding: 18px 15px 8px 15px;
+  margin: 10px 15px 0 15px;
+  text-align: left;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(60, 9, 41, 0.78);
+}
+
+
+.SendQuestionFormSuggestionpage-cursur-bar {
+  width: fit-content;
+
+
+  color: rgba(80, 8, 54, 0.78);
+  margin: -2px 0 0 0;
+  font-size: 21px;
+
+}
+
+.SendQuestionFormSuggestionpage-questionForm-textarea {
+  resize: none;
+  border: none;
+  width: 85%;
+  min-height: 70px;
+  height: fit-content;
+
+  
+  font-family: NanumBarunGothic;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  /* color: rgba(80, 8, 54, 0.62); */
+}
+
+.SendQuestionFormSuggestionpage-questionForm-textarea::placeholder {
+  font-family: NanumBarunGothic;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(80, 8, 54, 0.62);
+}
+
+.SendQuestionFormSuggestionpage-questionForm-textarea:focus {
+  outline: none;
+}
+
+
+
+.SendQuestionFormSuggestionPage-hr {
+  width: 93%;
+  height: 2px;
+  border: none;
+  background-color: #eaeaea;
+}
+
+
+.SendQuestionFormSuggestionPage-footer {
+
+  display: flex;
+  justify-content: right;
+  padding: 0 20px 15px 15px;
+
+  /* background-color: antiquewhite; */
+}
+
+.SendQuestionFormSuggestionPage-send-question-btn {
+  border: none;
+  background: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-right: -9px;
+}
+
+
+.SendQuestionFormSuggestionPage-send-question-btn img {
+  width: 25px;
+}

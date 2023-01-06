@@ -1,0 +1,14 @@
+type: object
+properties:
+  userId:
+    type: string
+    example: 'a879degmm896'
+  qId:
+    type: string
+    example: 'asdf79d8f6'
+  qContents:
+    type: string
+    example: '좋아하는 음식이 뭐야?'
+  aContents:
+    type: string
+    example: "슈프림순살 ㅎㅎㅎ"

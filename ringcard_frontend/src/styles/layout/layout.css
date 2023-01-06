@@ -1,0 +1,90 @@
+* {
+  -ms-overflow-style: none /* IE and Edge */
+  /* scrollbar-width: none Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+* {
+  font-family: NanumBarunGothic;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+}
+
+body {
+  background-color: rgb(91, 91, 91);
+}
+
+.container {
+  max-width: 480px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  /* background-color: rgb(255, 249, 230); */
+  background-image: url('../../../public/background-img/background.png');
+  background-size: cover;
+  overflow-y: auto;
+}
+
+.container-body {
+  /* background-color: aquamarine; */
+  /* margin-top:  */
+  position: relative;
+  /* top: calc(13% + 115px); */
+  top: 200px;
+  width: 100%;
+
+  max-width: inherit;
+
+}
+
+.contents-container {
+  position: relative;
+  /* top: 13%; */
+  top: 75px;
+  width: 100%;
+  max-width: inherit;
+  height: 100%;
+}
+
+
+
+.userInfo-profile-container {
+  /* background-color: aquamarine; */
+  height: 19%;
+  margin-top: calc(100vh*0.13);
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+input:focus {
+  outline: none;
+}
+
+.loading-message-box{
+  height: 100%;
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loading-message-center {
+  margin: 0 auto;
+  color: white;
+
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+}

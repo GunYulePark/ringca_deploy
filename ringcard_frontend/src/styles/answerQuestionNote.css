@@ -1,0 +1,332 @@
+.each-question-note-box {
+  margin: 0 auto;
+
+  /* 이거 건들지 말기. width 아래에 있는 리스트 애들이랑 맞춰놓은 거임. */
+  width: 93.5%;
+  min-width: 300px;
+  max-width: 440px;
+  min-height: 100px;
+
+}
+
+.each-question-note-header-edge-img-box {
+  height: 17px;
+  background-size: 100% 100%;
+  margin-bottom: -2px;
+}
+
+.each-question-note-body {
+
+  background-size: 100% 100%;
+  
+
+  padding: 0 25px 10px 25px;
+
+  /* padding: calc(5% + 15px) 15px 40% 15px; */
+  
+  
+}
+
+.each-note-header {
+  /* background-color: aqua; */
+  height: 40px;
+  padding-left: 2px;
+
+  display: inline-flex;
+  justify-content: left;
+}
+
+
+
+.each-note-content-box {
+  min-height: 50px;
+  padding: 8px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.each-note-content {
+  text-align: center;
+  font-family: NanumBarunGothic;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #333;
+}
+
+.AnswerFormQuestionNote-note-hyperlink-box {
+  /* background-color: aqua; */
+  width: 100%;
+
+  text-decoration: none;
+  color: #666666;
+
+}
+
+.AnswerFormQuestionNote-note-hyperlink-box img {
+  width: 18px;
+}
+
+
+.each-note-answer-form-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+
+}
+
+.each-question-note-footer-edge-img-box {
+  height: 40px;
+  background-size: 100% 100%;
+  margin-top: -20px;
+}
+
+/* ######################### AnswerForm #################### */
+
+.answerForm-answer-form {
+  /* background-color: blueviolet; */
+  margin: 8px, 20px;
+  width: 90%;
+
+}
+
+.cursur-bar {
+  margin-top: -1px;
+  margin-left: -6px;
+  margin-right: 3px;
+  font-size: 21px;
+}
+
+.answerForm-text-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.answerForm-textarea {
+  resize: none;
+  width: 100%;
+  min-height: 60px;
+
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+
+.answerForm-textarea:focus {
+  outline: none;
+}
+
+
+.answerForm-btn-box {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 3px;
+}
+
+.answerForm-btn-box button {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-right: -4%;
+
+  border: none;
+  background: none;
+}
+
+/* ######## AnswerAnswerFormQuestionNote */
+.answerForm-twitter-preview-box{
+  margin: auto auto;
+  display: absolute;
+  /* top: 50%; */
+  /* background-image: url( "../../public/background-img/twitter-share-note.png" ); */
+  width:400px;
+  height: 200px;
+  /* background-size: 100% 100%; */
+  text-align: center;
+  vertical-align: center;
+  /* line-height: 200px; */
+}
+
+.answerForm-twitter-preview-background-img{
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.answerForm-note-content-box {
+
+  /* background-color: darkgray; */
+  /* height: 54px; */
+  /* 이걸로 조절 */
+  /* 1안 */
+  /* padding: 80px 60px; */
+  /* padding: 55px 60px; */
+  width: 70%;
+  height: 100%;
+  padding: 0 15% 0 15%;
+  /* 2안 */
+  /* padding: 45px 90px; */
+  /* padding: 80px 60px; */
+
+  /* display: flex; */
+  /* display: -webkit-flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.answerForm-note-content {
+  /* background-color: aqua; */
+  /* overflow는 ...으로 대체하기 위함 */
+  display: -webkit-box;
+  /* 1안 */
+  -webkit-line-clamp: 5;
+  /* 2안 */
+  /* -webkit-line-clamp: 6; */
+  text-overflow: ellipsis; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  text-align: center;
+  font-family: NanumBarunGothic;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #333;
+  text-align: center;
+}
+
+.answerForm-note-hyperlink-container {
+
+  /* width: 100%; */
+
+  display: inline-flex;
+}
+
+.answerForm-note-hyperlink-icn-container {
+  /* width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px; */
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.answerForm-note-hyperlink-container {
+  display: inline-block;
+  width: 200px;
+  /* overflow는 ...으로 대체하기 위함 */
+  /* display: -webkit-box; */
+    /* -webkit-line-clamp: 1; */
+  text-overflow: ellipsis; 
+    /* -webkit-box-orient: vertical; */
+  overflow: hidden;
+  /* white-space  : nowrap; */
+
+  font-family: AppleSDGothicNeo;
+  font-size: 9px;
+  /* font-weight: bold; */
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  /* text-align: right; */
+
+  color:#b677a5;
+}
+
+.img-hyperlink {
+  float:left;
+}
+
+/* ##################### AnsweredQuestionNote ####################### */
+
+.each-note-answer-content-box {
+  width: 100%;
+  height: fit-content;
+
+  /* display: inline-flex; */
+}
+
+.AnsweredQuestionNote-answer-profile-pic {
+  /* width: 40px; */
+  height: 1px;
+  padding: 10px 12px 10px 12px;
+}
+
+.AnsweredQuestionNote-answer-profile-pic img {
+  width: 23px;
+}
+
+.AnsweredQuestionNote-answer-content {
+  /* background-color: aquamarine; */
+  width: 79%; 
+  height: fit-content;
+  padding: 5px;
+  padding-top: 18px;
+  padding-bottom : 15px;
+  margin: 0 auto;
+
+  font-family: NanumBarunGothic;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5972aa;
+}
+
+.QuestionPage-hr-box {
+  width: 100%;
+  height: 20px;
+  margin-top: 30px;
+
+  display: inline-flex;
+}
+
+.QuestionPage-hr {
+  margin-top: 10px;
+  width: 34%;
+  border: 0;
+  height: 1px;
+  background-color: rgba(234, 234, 234, 0.66);
+  
+}
+
+.QuestionPage-hr-text {
+
+  color: #ffffff;
+  font-family: NanumBarunGothic;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+}

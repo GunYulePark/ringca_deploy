@@ -1,0 +1,205 @@
+.join-text {
+  height: 17px;
+  opacity: 0.87;
+  font-family: NanumBarunGothic;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  margin-left: 1%;
+}
+
+.join-user-bar{
+  width: 100px;
+  height: 100px;
+  margin: 0 0 0 0;
+  opacity: 0.63;
+  font-family: NanumBarunGothic;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.join-user-bar-box{
+  position: absolute;
+  top:42%;
+  left:3%;
+  width: 100px; 
+  height: 100px;
+}
+
+.join-box{
+  /*전체 감싸기.*/
+  width: 100%;
+}
+.join-box-in{
+  /* 왼, 오 빈칸 남기고. padding에서 한 3+3=6% 뺀 94%  */
+  width: 94%; 
+  /* auto로 중간으로 맞추기 */
+  margin: 0 auto;
+  /* pw 변경 버튼 넣기 위해 */
+  position: relative;
+}
+
+.join-user-user{
+  /* padding 값 2개 뺀 거.*/
+  width: 81%;
+  height: 22px;
+  margin: 13px 0 13px 0;
+  padding: 15px 13% 14px 6%;
+  border-radius: 9px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+  border: none;
+  background-color: rgba(255, 255, 255, 0.35); 
+  font-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  /* 이것만 다름 */
+  background-image: url("../../public/buttons/user.svg");
+}
+.join-user-id{
+  /* padding 값 2개 뺀 거.*/
+  width: 81%;
+  height: 22px;
+  margin: 13px 0 13px 0;
+  padding: 15px 13% 14px 6%;
+  border-radius: 9px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+  border: none; 
+  background-color:rgba(255, 255, 255, 0.35); 
+  font-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  /* 이것만 다름 */
+  background-image: url("../../public/buttons/info.svg");
+}
+.join-user-pw{
+  /* padding 값 2개 뺀 거.*/
+  width: 81%;
+  height: 22px;
+  margin: 13px 0 13px 0;
+  padding: 15px 13% 14px 6%;
+  border-radius: 9px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+  border: none;
+  background-color: rgba(255, 255, 255, 0.35); 
+  font-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  /* 이것만 다름 */
+  background-image: url("../../public/buttons/lock.svg");
+}
+
+.join-user-pw-edit-btn{
+  position: absolute;
+  top: 45%;
+  right: 3%;
+  width: 42px;
+  height: 28px;
+  /* padding: 8px 10px 5px 11px; */
+  border: none;
+  border-radius: 13px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #434658;
+}
+.join-user-pw-edit-btn-text{
+  width: 100px;
+  height: 14px;
+  margin: 0 0 1px 3px;
+
+  font-family: NanumBarunGothic;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c7cdeb;
+}
+
+.join-user-email{
+  /* padding 값 2개 뺀 거.*/
+  width: 81%;
+  height: 22px;
+  margin: 13px 0 13px 0;
+  padding: 15px 13% 14px 6%;
+  border-radius: 9px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+  border: none;
+  background-color: rgba(255, 255, 255, 0.35); 
+  font-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  /* 이것만 다름 */
+  background-image: url("../../public/buttons/at-sign.svg");
+}
+.join-user-icon{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  left: 10px;
+}
+
+.join-btn{
+  margin-top: 15%;
+}
+
+.join-delete-box{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.join-delete{
+  width: 100%;
+  height: 15px;
+  margin: 20% 0 4.3px 0;
+  font-family: NanumBarunGothic;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.join-delete-text{
+  color: #fff;
+  text-decoration: none;
+  /* text-align: center;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+.Join-input-error-message {
+
+  padding-left: 13px;
+  font-family: NanumBarunGothic;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+}
+
+.Join-input-error-message p {
+  margin-top: -10px;
+}

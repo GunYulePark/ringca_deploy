@@ -1,0 +1,14 @@
+type: object
+properties:
+  userId:
+    type: string
+    example: 'a879degmm896'
+  qId:
+    type: string
+    example: 'asdf79d8f6'
+  qContents:
+    type: string
+    example: '지연이는 왜이렇게 예쁠까?'
+  aContents:
+    type: string
+    example: "그니까 나도 의문이야"

@@ -1,0 +1,14 @@
+type: object
+properties:
+  userId:
+    type: string
+    example: 'a879degmm896'
+  username:
+    type: string
+    example: 'yule_mu'
+  userEmail:
+    type: string
+    example: 'yulemu@gmail.com'
+  userPicture:
+    type: string
+    example: "userPictureExample.path.com"

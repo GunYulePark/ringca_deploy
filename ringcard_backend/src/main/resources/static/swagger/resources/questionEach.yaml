@@ -1,0 +1,52 @@
+post:
+  tags:
+    - No login
+  summary: Send Question
+  description: Question Contents
+  parameters:
+    - name: qId
+      in: path
+      required: true
+      description: 질문 고유아이디
+      schema:
+        type: string
+  requestBody:
+    $ref: "../schemas/qContentsSchema.yaml"
+  responses:
+    "200":
+      description: 정상적으로 불러와짐
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/200Schema.yaml"
+    "400":
+      description: 입력값의 형식이 다를 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/400Schema.yaml"
+
+get:
+  tags:
+    - No login
+  summary: Show User Question
+  parameters:
+    - name: qId
+      in: path
+      required: true
+      description: 질문 고유아이디
+      schema:
+        type: string
+  responses:
+    "200":
+      description: 정상적으로 불러와짐
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/questionEachSchema.yaml"
+    "400":
+      description: 입력값의 형식이 다르거나, 파라미터 값이 주어지지 않았을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/400Schema.yaml"

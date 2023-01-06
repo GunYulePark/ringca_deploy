@@ -1,0 +1,25 @@
+get:
+  tags:
+    - auth
+  summary: 이메일에 있는 토큰을 입력하면 랜딩되는 페이지
+  parameters:
+    - name: token
+      in: path
+      required: true
+      description: 이메일에 보낸 고유 token 값
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: token 유효기간이 지나지 않았을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/authSignUpTokenSchema.yaml"
+      "400":
+        description: token 이 expired 되거나 없을 경우
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/400Schema.yaml"

@@ -1,0 +1,20 @@
+post:
+  tags:
+    - auth
+  summary: 회원가입 시작
+  description: 사용자가 이메일을 입력하면 해당 이메일로 인증메일을 보낸다.
+  requestBody:
+    $ref: "../schemas/authSignUpSchema.yaml"
+  responses:
+    "200":
+      description: 이메일을 성공적으로 보냈을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/successMessage.yaml"
+    "400":
+      description: 이메일 주소가 사용 사용중이거나, 이메일 인증 실패, Input값이 잘못 되었을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/400Schema.yaml"

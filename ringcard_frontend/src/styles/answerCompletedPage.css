@@ -1,0 +1,26 @@
+.AnswerCompleted-viewMore-btn-container{
+  width: 100%;
+  height: 40px;
+  /* background-color: #fff; */
+}
+.AnswerCompleted-viewMore-btn-section {
+  /* background-color: aqua; */
+  width: 50%;
+  height: 40px;
+  background-color: #8188b3;
+  border-radius: 12px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16);
+  margin: 0 auto;
+}
+
+.AnswerCompleted-viewMore-btn{
+  width: 100%;
+  font-family: NanumBarunGothic;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2.7rem;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 9px;
+  border: none;
+}

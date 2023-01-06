@@ -1,0 +1,27 @@
+.questionPage-the-question-container {
+  width: 100%;
+  padding-top: 35px;
+
+}
+
+
+.questionPage-container-body {
+  /* background-color: aquamarine; */
+  /* margin-top:  */
+  position: relative;
+  /* top: calc(13% + 115px); */
+  width: 100%;
+  height: 80%;
+
+  max-width: inherit;
+
+}
+
+/* .QuestionPage-down-background-img {
+  background-image: url('../../public/background-img/down-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: -20px;
+  background-size: 105% 100%;
+  padding-top: 20px;
+} */

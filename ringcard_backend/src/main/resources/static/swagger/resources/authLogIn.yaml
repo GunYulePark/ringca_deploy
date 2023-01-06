@@ -1,0 +1,20 @@
+post:
+  tags:
+    - auth
+  summary: 로그인하기
+  description: 입력된 아이디와 비밀번호가 DB와 일치하는지 확인
+  requestBody:
+    $ref: "../schemas/authLogInSchema.yaml"
+  responses:
+    "200":
+      description: 아이디와 비밀번호를 DB에 성공적으로 저장했을 때
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/authLogInSuccess.yaml"
+    "400":
+      description: 아이디가 존재하지 않거나, 비밀번호가 일치하지 않을 때, Input type이 잘못 되었을 떄
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/400Schema.yaml"

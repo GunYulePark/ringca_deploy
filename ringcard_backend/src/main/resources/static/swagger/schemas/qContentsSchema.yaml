@@ -1,0 +1,5 @@
+type: object
+properties:
+  qContents:
+    type: string
+    example: "가장 좋아하는 웹툰은 뭔가요?"

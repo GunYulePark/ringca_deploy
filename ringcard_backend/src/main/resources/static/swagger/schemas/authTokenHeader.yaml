@@ -1,0 +1,5 @@
+name: security
+description: 토큰이 "Bearer sadhkjskdjhw.sdfjk(token)" 형태로 주어져야 한다.
+required: true
+schema:
+  type: string

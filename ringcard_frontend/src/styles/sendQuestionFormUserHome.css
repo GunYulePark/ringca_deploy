@@ -1,0 +1,190 @@
+.SendQuestionFormUserHome-container{
+  /* background-color: aquamarine; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+
+.SendQuestionFormUserHome-question-form {
+  background-color:  #fff;
+  width: 90%;
+  max-width: 440px;
+  min-height: 155px;
+
+  border-radius: 26px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  z-index: 10;
+}
+
+
+.SendQuestionFormUserHome-questionForm-contents-box {
+  display: flex;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+
+.SendQuestionFormUserHome-cursur-bar {
+  width: fit-content;
+
+
+  color: rgba(80, 8, 54, 0.78);
+  margin: 24px 0 0 0;
+  font-size: 21px;
+
+}
+
+
+.questionForm-textarea {
+  resize: none;
+  border: none;
+  width: 85%;
+  min-height: 70px;
+  height: fit-content;
+  margin-top: 26px;
+  
+  font-family: NanumBarunGothic;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  /* color: rgba(80, 8, 54, 0.62); */
+}
+
+.questionForm-textarea::placeholder {
+  font-family: NanumBarunGothic;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(80, 8, 54, 0.62);
+}
+
+.questionForm-textarea:focus {
+  outline: none;
+}
+
+.SendQuestionFormUserHome-customize-area-box {
+  /* background-color: chartreuse; */
+  width: 93%;
+  margin: 0 auto;
+  
+  display: flex;
+  justify-content: right;
+}
+
+.SendQuestionFormUserHome-customize-area {
+  width: 80px;
+  border-radius: 3px;
+  
+
+  display: inline-flex;
+}
+
+.SendQuestionFormUserHome-customize-area:active {
+  background-color: rgb(238, 238, 238);
+}
+
+.SendQuestionFormUserHome-customize-box {
+  /* background-color: pink ; */
+  width: 70px;
+  height: 30px;
+
+  display: inline-flex;
+  justify-content: space-between;
+
+  padding: 0 5px;
+}
+
+.SendQuestionFormUserHome-note-color {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: auto 5px auto 0;
+  /* background-color: #e9e1ec; */
+}
+
+.SendQuestionFormUserHome-note-color-text {
+  /* background-color: aqua; */
+  font-family: AppleSDGothicNeo;
+  font-size: 7px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3.14;
+  letter-spacing: normal;
+  text-align: center;
+  color: #a987a0;
+}
+
+.SendQuestionFormUserHome-open-modal-btn {
+  width: 10px;
+
+}
+
+.SendQuestionFormUserHome-hr {
+  width: 93%;
+  height: 2px;
+  border: none;
+  background-color: #eaeaea;
+}
+
+.SendQuestionFormUserHome-footer {
+  width: 90%;
+  margin: 6px auto 9px auto;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.SendQuestionFormUserHome-hyperlink-btn {
+  width: 18px;
+  margin-top: -3px;
+  margin-left: 5px;
+}
+
+.QuestionForm-hyperlink-input {
+  width: 78%;
+  height: 30px;
+  border: none;
+
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 30px;
+
+}
+
+.QuestionForm-hyperlink-input:focus {
+  outline: none;
+}
+
+.SendQuestionFormUserHome-send-question-btn {
+  border: none;
+  background: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-right: -9px;
+}
+
+.SendQuestionFormUserHome-send-question-btn img {
+  width: 25px;
+}

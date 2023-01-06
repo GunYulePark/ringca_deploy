@@ -1,0 +1,5 @@
+type: object
+properties:
+  message:
+    type: string
+    example: "답변보내기~슝~"

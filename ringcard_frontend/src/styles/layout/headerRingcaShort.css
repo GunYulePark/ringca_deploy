@@ -1,0 +1,32 @@
+.header-ringca-short{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-ringca-short-logo{
+  /* width: 139px; */
+  /* height: 50px; */
+  /* margin: 0 125px 110px 63px; */
+  opacity: 0.87;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  font-family: LeagueSpartan;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.28px;
+  text-align: left;
+  color: #fff;
+  /* 로고 아래로 내리고 싶은 만큼 */
+  padding-top: 64% ;
+}
+
+.header-ringca-short-logo-box {
+  height:100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}

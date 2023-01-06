@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>홈
+        <ul>
+            <li><a href="../html/home/unanswered.html"
+                th:href="@{/home/unanswered}">
+                미응답 질문 탭</a></li>
+            <li><a href="../html/home/answered.html"
+                   th:href="@{/home/answered}">
+                응답 질문 탭</a></li>
+            <li><a href="../html/home/trashcan.html"
+                   th:href="@{/home/trashcan}">
+                휴지통 탭</a></li>
+            <li><a href="../html/home/userHome.html"
+                   th:href="@{/userHome/bona}">
+                응답 질문 - 멤버 홈</a></li>
+        </ul>
+    </li>
+
+    <li>질문 고유 페이지
+        <ul>
+<!--            {questionId} 자리에 1을 넣어줬다.-->
+            <li><a href="../html/question/answeredAnony.html"
+                   th:href="@{/question/1/anony}"
+            >응답 질문 - 익명</a></li>
+            <li><a href="../html/question/answeredUser.html"
+                   th:href="@{/question/1/answered/user}"
+            >응답 질문 - 회원</a></li>
+            <li><a href="../html/question/answeredCompleted.html"
+                   th:href="@{/question/1/completed/user}"
+            >응답 completed - 회원</a></li>
+            <li><a href="../html/question/unanswered.html"
+                   th:href="@{/question/1/unanswered/user}"
+            >미응답 질문 - 회원</a></li>
+        </ul>
+    </li>
+
+    <li>마이페이지
+        <ul>
+            <li><a href="../html/mypage/userInfo.html"
+                   th:href="@{/mypage/info}"
+            >회원 정보</a></li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

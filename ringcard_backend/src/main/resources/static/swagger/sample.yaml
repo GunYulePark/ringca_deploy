@@ -1,0 +1,73 @@
+---
+openapi: 3.0.0
+info:
+  title: RingCard API Document
+  description: The API for RingCard project
+  version: 1.0.0
+servers:
+- url: http://localhost:8080/ko
+  description: RingCard Local Server
+tags:
+  - name: Home
+    description: main page for login users
+    url: "http://localhost:8080/ko/home"
+  - name: Question
+    description: A page for each question
+    url: "http://localhost:8080/ko/q"
+  - name: No login
+    description: A page that senders can see
+    url: "http://localhost:8080/ko/"
+  - name: auth
+    description: authentication related
+    url: "http://localhost:8080/ko/auth"
+  - name: user
+    description: About userInfo
+    url: "http://localhost:8080/ko/user/{userId}"
+
+paths:
+  /home/unanswered:
+    $ref: "./resources/homeUnAnswered.yaml"
+  /home/answered:
+    $ref: "./resources/homeAnswered.yaml"
+  /home/trashcan:
+    $ref: "./resources/homeTrashcan.yaml"
+  /question/{qId}:
+    $ref: "./resources/questionToAnswer.yaml"
+  /question/{qId}/completed:
+    $ref: "./resources/questionCompleted.yaml"
+  /{userId}:
+    $ref: "./resources/userHome.yaml"
+  /{qId}:
+    $ref: "./resources/questionEach.yaml"
+  /:
+    $ref: "./resources/landingPage.yaml"
+  /auth/logIn:
+    $ref: "./resources/authLogIn.yaml"
+  /auth/signUp:
+    $ref: "./resources/authSignUp.yaml"
+  /auth/signUp/{token}:
+    $ref: "./resources/authSignUpToken.yaml"
+  /auth/setPwd/{token}:
+    $ref: "./resources/authSetPwd.yaml"
+  /auth/resetPwd:
+    $ref: "./resources/authResetPwd.yaml"
+  /auth/sendTokenToResetPwd:
+    $ref: "./resources/authSendTokenToResetPwd.yaml"
+  /auth/resetPwd/{token}:
+    $ref: "./resources/authResetToken.yaml"
+  /user/userInfo:
+    $ref: "./resources/userInfo.yaml"
+  /user/userInfo/changeUserPicture:
+    $ref: "./resources/userChangeUserPicture.yaml"
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    $ref: "./schemas/_index.yaml"
+  responses:
+    $ref: "./responses/_index.yaml"
+

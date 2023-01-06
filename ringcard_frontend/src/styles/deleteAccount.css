@@ -1,0 +1,13 @@
+.deleteAccount-btn{
+  margin-top: 11%;
+  background-color: #cc0000;
+}
+
+.deleteAccount-btn-cancel{
+  margin-top: 0%;
+  background-color: #d7d0e3;
+}
+
+.deleteAccount-btn-text-cancel{
+  color: black;
+}

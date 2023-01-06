@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 29 26" stroke="#666666" preserveAspectRatio="none" opacity="0.66">
+  <g id="trash" transform="translate(1.5 1.5)">
+    <path id="패스_603" data-name="패스 603" d="M3,6H26.1" transform="translate(-3 -1.404)" fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="패스_604" data-name="패스 604" d="M23.5,6.6V22.68a2.489,2.489,0,0,1-2.643,2.3H7.643A2.489,2.489,0,0,1,5,22.68V6.6m3.965,0V4.3A2.489,2.489,0,0,1,11.608,2h5.286a2.489,2.489,0,0,1,2.643,2.3V6.6" transform="translate(-2.702 -2)" fill="none" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

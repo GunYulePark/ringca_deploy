@@ -1,0 +1,94 @@
+.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-custom {
+    width: 100%;
+    margin: 0 auto 30px auto;
+    padding: 0;
+}
+
+.nav-items {
+    width: 400px;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    background-color: rgb(204, 230, 255);
+    background-clip: content-box;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nav-item a {
+    margin: 0;
+}
+
+.active {
+    background-color: rgb(128, 193, 255);
+}
+
+
+/*####################### contents #####################*/
+.question-form {
+    min-height: 220px;
+    margin-bottom: 40px;
+    padding: 10px, 13px;
+}
+
+.question-form div {
+    margin-top: 10px;
+}
+
+.hyperlink-text {
+    font-size: small;
+    margin-top: 5px;
+}
+
+.empty-trash-can {
+    float: left;
+    margin: 0 10px 20px 0;
+}
+
+.fyi {
+    line-height: 40px;
+    color: #be0000;
+    font-weight: bold;
+}
+
+.card {
+    clear: left;
+}
+
+.card-footer {
+    padding: 0;
+}
+
+.card-footer-buttons {
+    width: 100%;
+}
+
+.card-footer-btn-custom {
+    width: 33%;
+    background-color: rgba(0, 0, 0, 0.03);
+    color: rgba(0, 0, 0, 0.8);
+    border-color: rgba(0, 0, 0, 0.03);
+}
+
+.collection-img {
+    width: 15px;
+    height: 17px;
+}
+
+.input-text-area {
+    height: 160px;
+    resize: none;
+}

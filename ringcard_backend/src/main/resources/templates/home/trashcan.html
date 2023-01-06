@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link th:href="@{/css/layout.css}" href="../../css/layout.css" rel="stylesheet">
+    <link th:href="@{/css/home.css}" href="../../css/home.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="../../js/sidebar.js"></script>
+
+    <title>휴지통</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid navbar-custom">
+                <div class="home-icon" onclick="location.href='../home/unanswered.html'"
+                     th:onclick="|location.href='@{/home/unanswered}'|">
+                    <img src="../public/homeIcon.png" th:src="@{/public/homeIcon.png}">
+                </div>
+                <div class="nav-items container-fluid">
+                    <div class="nav-item"><a class="navbar-brand" href="unanswered.html" th:href="@{unanswered}">미응답</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="navbar-brand" href="answered.html" th:href="@{answered}">답변됨</a>
+                    </div>
+                    <div class="nav-item active"><a class="navbar-brand" href="trashcan.html"
+                                                    th:href="@{trashcan}">휴지통</a></div>
+                    <div class="nav-item"><a class="navbar-brand" href="collection.html" th:href="@{collection}">보관함</a>
+                    </div>
+                </div>
+                <div type="button" class="menu" data-bs-toggle="modal" data-bs-target="#sideModal">
+                    <img src="../../public/menu-icon.png" th:src="@{/public/menu-icon.png}">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Modal -->
+        <div class="modal fade right" id="sideModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li><a th:href="@{/mypage/info}">
+                                <div>마이페이지</div>
+                            </a></li>
+                            <li><a>
+                                <div>
+                                    <form th:action="@{/logout}" method="post">
+                                        <button class="logout-button" type="submit">
+                                            로그아웃
+                                        </button>
+                                    </form>
+                                </div>
+                            </a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="empty-trash-container">
+        <button th:onclick="|location.href='@{/home/trashcan/emptyTrashcan}'|" type="button"
+                class="btn btn-danger empty-trash-can">휴지통 비우기
+        </button>
+        <div class="fyi">휴지통에 있는 모든 질문들이 영구적으로 삭제됩니다.</div>
+    </div>
+
+    <div class="card-container">
+        <div class="card" th:each="i : ${#numbers.sequence(questions.size()-1, 0, -1)}" >
+
+            <div th:id="'card-header'+${i}" class="card-header" th:name="uploadTime" >
+            </div>
+
+            <script th:inline="javascript">
+         /*<![CDATA[*/
+            var i = [[${i}]];
+            var currentUploadTime = /*[[${questions[i].uploadTime}]]*/;
+
+        </script>
+            <script src="../../js/uploadTime.js"></script>
+
+            <a href="../question/answeredAnony.html" th:if="${questions[i].answered == true}"
+               th:href="@{/question/{questionId}/edit/user(questionId=${questions[i].id})}">
+                <div class="card-body">
+
+                    <blockquote class="blockquote mb-0 size-fix-card">
+                        <p th:text="${questions[i].questionContents}">오늘 점심 뭐 먹었어?</p>
+                        <div th:if="${not #strings.isEmpty(questions[i].questionHyperlink)}" class="hyperlink-text">
+                            <p text="hyperLink" th:text="${questions[i].questionHyperlink}" target="_blank"></p>
+                        </div>
+                    </blockquote>
+
+                </div>
+            </a>
+
+            <a href="../question/answeredAnony.html" th:if="${questions[i].answered == false}"
+               th:href="@{/question/{questionId}/unanswered/user(questionId=${questions[i].id})}">
+                <div class="card-body">
+
+                    <blockquote class="blockquote mb-0 size-fix-card">
+                        <p th:text="${questions[i].questionContents}">오늘 점심 뭐 먹었어?</p>
+                        <footer th:if="${not #strings.isEmpty(questions[i].questionHyperlink)}"
+                                class="blockquote-footer hyperlink-text"
+                                text="hyperLink"
+                                th:text="${questions[i].questionHyperlink}"></footer>
+                    </blockquote>
+
+                </div>
+            </a>
+
+            <div class="card-footer text-muted">
+                <div class="btn-group card-footer-buttons" role="group" aria-label="Basic example">
+                    <button class="btn btn-primary card-footer-btn-custom"
+                            th:onclick="|location.href='@{/question/{questionId}/inCollection(questionId=${questions[i].id})}'|"
+                            type="button">
+                        <img class="collection-img" th:if="${questions[i].inCollection == true}"
+                             th:src="@{/public/inCollection.png}">
+                        <img class="collection-img" th:if="${questions[i].inCollection == false}"
+                             th:src="@{/public/notInCollection.png}">
+                        보관하기
+                    </button>
+                    <button class="btn btn-primary card-footer-btn-custom"
+                            th:if="${questions[i].answered == false}"
+                            th:onclick="|location.href='@{/question/{questionId}/unanswered/user(questionId=${questions[i].id})}'|"
+                            name=""
+                            type="button">답변하기
+                    </button>
+                    <button class="btn btn-primary card-footer-btn-custom"
+                            th:if="${questions[i].answered == true}"
+                            th:onclick="|location.href='@{/question/{questionId}/edit/user(questionId=${questions[i].id})}'|"
+                            name=""
+                            type="button">답변수정
+                    </button>
+                    <button class="btn btn-primary card-footer-btn-custom"
+                            onclick="#"
+                            th:onclick="|location.href='@{/question/{questionId}/restore/question(questionId=${questions[i].id})}'|"
+                            type="button">복구하기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
