@@ -77,7 +77,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.logout()
                 .logoutUrl("/logout")
 //                .logoutSuccessUrl("/loginForm").permitAll()
-                .deleteCookies(JwtProperties.COOKIE_NAME)
+                .deleteCookies(COOKIE_NAME)
                 .invalidateHttpSession(true)
                 .logoutSuccessHandler(new CustomLogoutSuccessHandler());
     }
