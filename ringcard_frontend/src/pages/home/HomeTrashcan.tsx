@@ -15,7 +15,6 @@ function HomeUnanswered() {
 	const [totalPages, setTotalPages] = useState<number>();
 	const [pageNumber, setPageNumber] = useState(0);
 	const [userName, setUserName] = useState<String>();
-
 	const pageAddress = "trashcan";
 
 	useEffect(() => {
@@ -43,6 +42,7 @@ function HomeUnanswered() {
 		setShowReq(!showReq);
 	}
 
+	
 	return (
 		<div className="container">
 			<Header userName={userName} />
