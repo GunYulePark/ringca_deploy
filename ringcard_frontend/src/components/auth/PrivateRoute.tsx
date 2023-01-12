@@ -6,6 +6,7 @@ export interface Props {
 	authenticated: boolean;
 	component: React.ReactElement;
 	noAuthComponent: React.ReactElement;
+	
 }
 
 function PrivateRoute(props: Props): React.ReactElement | null {
