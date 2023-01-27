@@ -10,7 +10,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-import com.oneao.JwtProperties;
 
 
 import javax.servlet.FilterChain;
@@ -47,7 +46,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
             return;}
 
         for (Cookie cookie : cookies) {
-            if (cookie.getName().equals(JwtProperties.COOKIE_NAME)) {
+            if (cookie.getName().equals(COOKIE_NAME)) {
                 jwtToken = cookie.getValue();
             }
         }
@@ -58,7 +57,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
         }
 
         // jwt 토큰을 검증해서 정상적인 사용자인지 확인
-        String username = JWT.require(Algorithm.HMAC512(JwtProperties.SECRET)).build().verify(jwtToken).getClaim("username").asString();
+        String username = JWT.require(Algorithm.HMAC512(SECRET)).build().verify(jwtToken).getClaim("username").asString();
 
         // 서명이 정상적으로 됨
         if (username != null) {

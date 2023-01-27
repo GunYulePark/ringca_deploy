@@ -16,7 +16,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.session.DisableEncodeUrlFilter;
-import com.oneao.JwtProperties;
 
 @RequiredArgsConstructor
 @Slf4j
@@ -78,7 +77,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.logout()
                 .logoutUrl("/logout")
 //                .logoutSuccessUrl("/loginForm").permitAll()
-                .deleteCookies(JwtProperties.COOKIE_NAME)
+                .deleteCookies(COOKIE_NAME)
                 .invalidateHttpSession(true)
                 .logoutSuccessHandler(new CustomLogoutSuccessHandler());
     }
