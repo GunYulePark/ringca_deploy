@@ -90,5 +90,6 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         Cookie jwtCookie = new Cookie(JwtProperties.COOKIE_NAME, jwtToken);
         response.addCookie(jwtCookie);
 
+
     }
 }
