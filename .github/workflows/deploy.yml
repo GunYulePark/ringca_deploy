@@ -11,6 +11,8 @@ env:
   JWT_PROPERTY_EXPIRATION_TIME : ${{ secrets.JWT_PROPERTY_EXPIRATION_TIME }}
   JWT_PROPERTY_COOKIE_NAME: ${{ secrets.JWT_PROPERTY_COOKIE_NAME }}
   COOKIE_NAME: ${{ secrets.COOKIE_NAME }}
+  SECRET: ${{ secrets.SECRET }}
+  EXPIRATION_TIME: ${{ secrets.EXPIRATION_TIME }}
 
 jobs:
   deploy:
