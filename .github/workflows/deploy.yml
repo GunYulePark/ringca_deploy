@@ -59,9 +59,9 @@ jobs:
           
       - name: Generate Environment Variables File for Production
         run: |
-          echo "SECRET=$SECRET" >> JwtProperties.java
-          echo "EXPIRATION_TIME=$EXPIRATION_TIME" >> JwtProperties.java
-          echo "COOKIE_NAME=$COOKIE_NAME" >> JwtProperties.java
+          echo "SECRET=$SECRET" >> JwtProperties
+          echo "EXPIRATION_TIME=$EXPIRATION_TIME" >> JwtProperties
+          echo "COOKIE_NAME=$COOKIE_NAME" >> JwtProperties
         env:
           SECRET: ${{ secrets.SECRET }}
           EXPIRATION_TIME: ${{ secrets.EXPIRATION_TIME }}
