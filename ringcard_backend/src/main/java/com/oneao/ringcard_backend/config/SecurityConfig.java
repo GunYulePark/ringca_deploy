@@ -41,7 +41,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public BCryptPasswordEncoder encodePwd() {
         return new BCryptPasswordEncoder();
     }
-
     @Value("${application.properties.spring.datasource.cookie_name}")
     public String COOKIE_NAME;
 
