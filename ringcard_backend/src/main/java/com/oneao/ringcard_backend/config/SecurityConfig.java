@@ -6,6 +6,7 @@ import com.oneao.ringcard_backend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -41,6 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    @Value("${application.properties.spring.datasource.cookie_name}")
+    private String COOKIE_NAME;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -77,7 +80,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.logout()
                 .logoutUrl("/logout")
 //                .logoutSuccessUrl("/loginForm").permitAll()
-                .deleteCookies(JwtProperties.COOKIE_NAME)
+                .deleteCookies(COOKIE_NAME)
                 .invalidateHttpSession(true)
                 .logoutSuccessHandler(new CustomLogoutSuccessHandler());
     }
