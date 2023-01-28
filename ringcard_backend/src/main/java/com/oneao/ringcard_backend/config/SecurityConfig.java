@@ -43,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Value("${application.properties.spring.datasource.cookie_name}")
-    private String COOKIE_NAME;
+    public String COOKIE_NAME;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

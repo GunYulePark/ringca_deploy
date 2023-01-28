@@ -5,6 +5,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.oneao.ringcard_backend.config.auth.PrincipalDetails;
 import com.oneao.ringcard_backend.domain.user.User;
 import com.oneao.ringcard_backend.service.UserService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -31,6 +32,13 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
         this.userService = userService;
     }
 
+    @Value("${application.properties.spring.datasource.cookie_name}")
+    public String COOKIE_NAME;
+
+    @Value("${application.properties.spring.datasource.secret}")
+    public String SECRET;
+
+
     // 인증이나 권한이 필요한 주소 요청이 있을 때 해당 필터를 타게 됨.
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
@@ -46,7 +54,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
             return;}
 
         for (Cookie cookie : cookies) {
-            if (cookie.getName().equals(JwtProperties.COOKIE_NAME)) {
+            if (cookie.getName().equals(COOKIE_NAME)) {
                 jwtToken = cookie.getValue();
             }
         }
@@ -57,7 +65,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
         }
 
         // jwt 토큰을 검증해서 정상적인 사용자인지 확인
-        String username = JWT.require(Algorithm.HMAC512(JwtProperties.SECRET)).build().verify(jwtToken).getClaim("username").asString();
+        String username = JWT.require(Algorithm.HMAC512(SECRET)).build().verify(jwtToken).getClaim("username").asString();
 
         // 서명이 정상적으로 됨
         if (username != null) {

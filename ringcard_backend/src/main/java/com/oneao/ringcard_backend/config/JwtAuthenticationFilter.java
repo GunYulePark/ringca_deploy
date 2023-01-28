@@ -4,6 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.oneao.ringcard_backend.config.auth.PrincipalDetails;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -31,6 +32,14 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
     private final AuthenticationManager authenticationManager;
 
+    @Value("${application.properties.spring.datasource.secret}")
+    public String SECRET;
+
+    @Value("${application.properties.spring.datasource.expiration_time}")
+    public String EXPIRATION_TIME;
+
+    @Value("${application.properties.spring.datasource.cookie_name}")
+    public String COOKIE_NAME;
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         System.out.println("JwtAuthenticationFilter : 로그인 시도 중");
@@ -82,12 +91,12 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         //RSA 방식은 아니고 Hash 암호 방식
         String jwtToken = JWT.create()
                 .withSubject("토큰토큰")
-                .withExpiresAt(new Date(System.currentTimeMillis() + JwtProperties.EXPIRATION_TIME))
+                .withExpiresAt(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
                 .withClaim("id", principalDetails.getUser().getId())
                 .withClaim("username", principalDetails.getUser().getUsername())
-                .sign(Algorithm.HMAC512(JwtProperties.SECRET));
+                .sign(Algorithm.HMAC512(SECRET));
 
-        Cookie jwtCookie = new Cookie(JwtProperties.COOKIE_NAME, jwtToken);
+        Cookie jwtCookie = new Cookie(COOKIE_NAME, jwtToken);
         response.addCookie(jwtCookie);
 
 
