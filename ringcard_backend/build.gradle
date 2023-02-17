@@ -57,7 +57,11 @@ dependencies {
 	implementation group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '3.0.4'
 }
 
-tasks.named('test') {
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}
+
+test{
 	useJUnitPlatform()
 }
 def reactDir = "$projectDir/src/main/webapp/ringca_deploy";
