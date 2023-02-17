@@ -61,9 +61,6 @@ dependencies {
 //	useJUnitPlatform()
 //}
 
-test{
-	useJUnitPlatform()
-}
 def reactDir = "$projectDir/src/main/webapp/ringca_deploy";
 
 sourceSets{
