@@ -30,7 +30,7 @@ jobs:
           java-version: 11
 
       - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
+        run: chmod +x ./gradlew --debug build
         working-directory: ${{ env.working-directory }}
         shell: bash
 
