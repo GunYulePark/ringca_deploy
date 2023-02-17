@@ -39,13 +39,8 @@ jobs:
 #        working-directory: ${{ env.working-directory }}
 #        shell: bash
 
-#       - name: Build with Gradle
-#         run: gradle build
-#         working-directory: ${{ env.working-directory }}
-#         shell: bash
-        
       - name: Build with Gradle
-        run: gradle debug build 
+        run: gradle build
         working-directory: ${{ env.working-directory }}
         shell: bash
 
