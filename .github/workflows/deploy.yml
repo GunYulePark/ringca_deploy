@@ -45,7 +45,7 @@ jobs:
 #         shell: bash
         
       - name: Build with Gradle
-        run: gradlew debug build 
+        run: gradle debug build 
         working-directory: ${{ env.working-directory }}
         shell: bash
 
