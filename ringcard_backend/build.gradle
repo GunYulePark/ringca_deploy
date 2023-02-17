@@ -60,50 +60,51 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+def reactDir = "$projectDir/src/main/webapp/ringca_deploy";
 
-def frontendDir = "$projectDir/../ringcard_frontend"
-
-sourceSets {
-	main {
-		resources {
+sourceSets{
+	main{
+		resources{
 			srcDirs = ["$projectDir/src/main/resources"]
 		}
 	}
 }
 
-processResources {
+processResources{
 	dependsOn "copyReactBuildFiles"
 }
 
-task installReact(type: Exec) {
-	workingDir "$frontendDir"
-	inputs.dir "$frontendDir"
+task installReact(type:Exec){
+	workingDir "$reactDir"
+	inputs.dir "$reactDir"
 	group = BasePlugin.BUILD_GROUP
-	if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+
+	if(System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')){
 		commandLine "npm.cmd", "audit", "fix"
 		commandLine 'npm.cmd', 'install'
-	} else {
+	}else{
 		commandLine "npm", "audit", "fix"
 		commandLine 'npm', 'install'
 	}
 }
 
-task buildReact(type: Exec) {
+task buildReact(type:Exec){
 	dependsOn "installReact"
-	workingDir "$frontendDir"
-	inputs.dir "$frontendDir"
+	workingDir "$reactDir"
+	inputs.dir "$reactDir"
 	group = BasePlugin.BUILD_GROUP
-	if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+
+	if(System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')){
 		commandLine "npm.cmd", "run-script", "build"
-	} else {
+	}else{
 		commandLine "npm", "run-script", "build"
 	}
 }
 
-task copyReactBuildFiles(type: Copy) {
+task copyReactBuildFiles(type:Copy){
 	dependsOn "buildReact"
-	from "$frontendDir/build"
-	into "$buildDir/resources/main/static"
+	from "$reactDir/build"
+	into "$projectDir/src/main/resources/static"
 }
 
 tasks.bootJar {
