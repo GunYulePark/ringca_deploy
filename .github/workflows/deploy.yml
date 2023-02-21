@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - main
-
+      
 name: Deploy String boot to Amazon EC2
 env:
   PROJECT_NAME: ringcard_deploy
