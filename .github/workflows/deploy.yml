@@ -41,12 +41,8 @@ jobs:
         run: chmod +x gradlew
         shell: bash
 
-#      - name: gradle wrapper
-#        run: gradle wrapper --gradle-version 7.5
-#        shell: bash
-
       - name: Build with Gradle
-        run: gradle build
+        run: ./gradlew build
         shell: bash
 
       - name: Make zip file
