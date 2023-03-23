@@ -7,7 +7,6 @@ on:
 name: Deploy String boot to Amazon EC2
 env:
   PROJECT_NAME: ringcard_deploy
-  working-directory: ./ringcard_backend
   JWT_PROPERTY_SECRET: ${{ secrets.JWT_PROPERTY_SECRET }}
   JWT_PROPERTY_EXPIRATION_TIME : ${{ secrets.JWT_PROPERTY_EXPIRATION_TIME }}
   JWT_PROPERTY_COOKIE_NAME: ${{ secrets.JWT_PROPERTY_COOKIE_NAME }}
@@ -40,17 +39,14 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
-        working-directory: ${{ env.working-directory }}
         shell: bash
 
 #      - name: gradle wrapper
 #        run: gradle wrapper --gradle-version 7.5
-#        working-directory: ${{ env.working-directory }}
 #        shell: bash
 
       - name: Build with Gradle
         run: gradle build
-        working-directory: ${{ env.working-directory }}
         shell: bash
 
       - name: Make zip file
